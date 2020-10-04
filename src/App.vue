@@ -1,26 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <SentenceInput />
+        <RuleInput />
+      </div>
+      <div class="column">
+        Hello world
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SentenceInput from './components/SentenceInput.vue';
+import RuleInput from './components/RuleInput.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
+    SentenceInput,
+    RuleInput,
+  },
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
