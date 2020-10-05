@@ -1,6 +1,8 @@
 # CYK Algorithm Visualization
 
-CYK Algorithm Visualzation (CYK table and parse trees). For more information about the CYK visualization, please visti [Wikipedia](https://en.wikipedia.org/wiki/CYK_algorithm)
+CYK Algorithm Visualzation (CYK table and parse trees).
+
+For more information about the CYK visualization, please visit [Wikipedia](https://en.wikipedia.org/wiki/CYK_algorithm)
 
 ## Project setup
 ```
