@@ -1,4 +1,6 @@
-# cyk-algo
+# CYK Algorithm Visualization
+
+CYK Algorithm Visualzation (CYK table and parse trees). For more information about the CYK visualization, please visti [Wikipedia](https://en.wikipedia.org/wiki/CYK_algorithm)
 
 ## Project setup
 ```
@@ -20,5 +22,3 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
