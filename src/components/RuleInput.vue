@@ -14,36 +14,34 @@
       <div class="control">
         <textarea
           class="textarea"
-          placeholder="e.g. Google bought DeepMind for $500M in January."
+          placeholder="e.g S -> NP,VP"
           rows="5"
-          v-model="state.rawRules"
+          v-model="store.state.rawRules"
         ></textarea>
       </div>
     </div>
 
+    <article
+      class="message is-danger"
+      v-show="store.state.error.length > 0"
+    >
+      <div class="message-body">
+        {{ store.state.error }}
+      </div>
+    </article>
   </div>
 </template>
 
 <script>
-import { watch } from 'vue';
-
-import { useState } from '../store';
-import { parseRules } from '../utils';
+import { useStore } from '../store';
 
 
 export default {
   setup() {
-    const state = useState();
-
-    watch(
-      () => state.rawRules,
-      (rawRules) => {
-        state.rules = parseRules(rawRules);
-      },
-    )
+    const store = useStore();
 
     return {
-      state,
+      store,
     };
   },
 }

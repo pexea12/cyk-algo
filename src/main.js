@@ -4,8 +4,8 @@ import App from './App.vue'
 import 'bulma/css/bulma.css';
 
 import {
-  stateSymbol,
-  createState,
+  storeSymbol,
+  createStore,
 } from './store';
 
 import {
@@ -16,5 +16,5 @@ import {
 console.log('Version', version);
 
 const app = createApp(App);
-app.provide(stateSymbol, createState());
+app.provide(storeSymbol, createStore());
 app.mount('#app')

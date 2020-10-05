@@ -7,30 +7,28 @@
           class="textarea"
           placeholder="e.g. Google bought DeepMind for $500M in January."
           rows="3"
-          v-model="state.sentence"
+          v-model="store.state.sentence"
         ></textarea>
       </div>
     </div>
 
     <div class="field">
       <label class="label">Words</label>
-      {{ getWords(state.sentence) }}
+      {{ store.getters.words.value }}
     </div>
   </div>
 </template>
 
 <script>
-import { useState } from '../store';
-import { getWords } from '../utils';
+import { useStore } from '../store';
 
 
 export default {
   setup() {
-    const state = useState();
+    const store = useStore();
 
     return {
-      state,
-      getWords,
+      store,
     };
   },
 }
